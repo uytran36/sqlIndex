@@ -10,10 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Data
+@Data // Getter Setter To-String
 @Table(name = "HoaDon")
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor // Tự động khởi tạo Constructor
+@AllArgsConstructor // Khởi tạo Atrribute
 public class HoaDon {
     @Id
     @Column(name = "MaHD")
