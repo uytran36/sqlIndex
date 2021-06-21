@@ -18,7 +18,8 @@ public class HoaDonController {
     @GetMapping(value = "/index")
     public String homepage(Model model) {
 //        model.addAttribute("dsHD", hoaDonService.danhSachHoaDon());
-        return "index";
+        // Lấy record DB hiện lên HTML
+        return "index"; // index là tên trang HTML
     }
 
     @PostMapping(value = "/add")

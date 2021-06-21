@@ -1,0 +1,87 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #272829;
+    background-color: whitesmoke;
+}
+
+/*HEADER*/
+#header{
+    background-color: aqua;
+}
+
+/*MAIN*/
+#main h1{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#table{
+    margin-left: 20px;
+    margin-right: 1em;
+}
+
+.thead-dark{
+    background-color: #21578a;
+    color: white;
+}
+
+#select{
+    width: 50%;
+    margin-bottom: 20px;
+
+    margin-left: 33%;
+}
+
+#month, #year, #btnXem{
+    display: inline;
+    margin-left: 15px;
+}
+#month .form-select, #year .form-select{
+    display: inline; 
+    width: 20%;
+}
+
+#btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#btnprev{
+    margin-right: 70em;
+}
+@media (max-width: 1500px) {
+    #select{
+        margin-bottom: 20px;
+        margin-left: 27%;
+    }
+    #month .form-select, #year .form-select{
+        display: inline; 
+        width: 20%;
+    }
+    #btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    #btnprev{
+        margin-right: 30em;
+    }
+}
+
+/*FOOTER*/
+#footer{
+    background-color: rgb(240, 238, 238);
+}
+
+#footer p{
+    text-align: center;
+    font-style: italic;
+    color: #45505b;
+}
