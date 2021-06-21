@@ -18,28 +18,31 @@
 <body>
 <h1>Them hoa don</h1>
 <form method="post">
-  <h2>Thong tin khach hang</h2>
-  <label>Họ</label>
-  <input type="text" class="form-control" name="ho">
-  <label>Tên</label>
-  <input type="text" class="form-control" name="ten">
-  <label>Ngày sinh</label>
-  <input type="date" class="form-control" name="ngSinh">
-  <label>Số nhà</label>
-  <input type="text" class="form-control" name="soNha">
-  <label>Đường</label>
-  <input type="text" class="form-control" name="duong">
-  <label>Phường</label>
-  <input type="text" class="form-control" name="phuong">
-  <label>Quận</label>
-  <input type="text" class="form-control" name="quan">
-  <label>Thành phố</label>
-  <input type="text" class="form-control" name="thPho">
-  <label>Điện thoại</label>
-  <input type="tel" class="form-control" name="dienThoai">
+<!--  <h2>Thong tin khach hang</h2>-->
+<!--  <label>Họ</label>-->
+<!--  <input type="text" class="form-control" name="ho">-->
+<!--  <label>Tên</label>-->
+<!--  <input type="text" class="form-control" name="ten">-->
+<!--  <label>Ngày sinh</label>-->
+<!--  <input type="date" class="form-control" name="ngSinh">-->
+<!--  <label>Số nhà</label>-->
+<!--  <input type="text" class="form-control" name="soNha">-->
+<!--  <label>Đường</label>-->
+<!--  <input type="text" class="form-control" name="duong">-->
+<!--  <label>Phường</label>-->
+<!--  <input type="text" class="form-control" name="phuong">-->
+<!--  <label>Quận</label>-->
+<!--  <input type="text" class="form-control" name="quan">-->
+<!--  <label>Thành phố</label>-->
+<!--  <input type="text" class="form-control" name="thPho">-->
+<!--  <label>Điện thoại</label>-->
+<!--  <input type="tel" class="form-control" name="dienThoai">-->
 
-  <h2>Thong tin hoa don</h2>
+  <h2>Thông tin hóa đơn</h2>
   <table class="table">
+    <h3>Chi tiết hóa đơn</h3>
+    <div>Mã hóa đơn:<span th:text="${maHD}" name="maHD"></span></div>
+    <div>Tổng tiền: </div>
     <thead>
       <tr>
         <th>Ma San Pham</th>
@@ -53,13 +56,14 @@
     </tbody>
   </table>
   <div id="items">
-    <input type="text" name="ma-SP" id="maSP">
-    <input type="number" name="so-luong" id="soLuong">
-    <input type="number" name="gia-ban" id="giaBan">
-    <input type="number" name="gia-giam" id="giaGiam">
+    <input type="text" name="maSP" id="maSP">
+    <input type="number" name="soLuong" id="soLuong">
+    <input type="number" name="giaBan" id="giaBan">
+    <input type="number" name="giaGiam" id="giaGiam">
   </div>
-  <button type="button" onclick="addHoaDon()">Add</button>
-
+  <button type="button" onclick="addHoaDon()">Thêm chi tiết hóa đơn</button>
+  <button type="button" onclick="">Tổng kết</button>
+  <button type="submit"></button>
 </form>
 
 <!-- Optional JavaScript; choose one of the two! -->

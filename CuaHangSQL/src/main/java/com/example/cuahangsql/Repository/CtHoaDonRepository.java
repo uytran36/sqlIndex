@@ -10,4 +10,5 @@ import java.util.Optional;
 public interface CtHoaDonRepository extends JpaRepository<CtHoaDon, String> {
     @Override
     Optional<CtHoaDon> findById(String s);
+
 }
