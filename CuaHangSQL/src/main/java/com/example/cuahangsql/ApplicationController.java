@@ -10,4 +10,7 @@ public class ApplicationController {
     private String themHoaDon() {
         return "add";
     }
+
+//    @GetMapping(value = "/doanhthu")
+//    private String doanhThu() { return "doanhThu";}
 }
