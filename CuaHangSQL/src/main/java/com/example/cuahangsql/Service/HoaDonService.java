@@ -22,9 +22,17 @@ public class HoaDonService {
         String listHd = "SELECT * FROM HoaDon WHERE MaHD='HD00000001'";
         return jdbcTemplate.query(listHd, BeanPropertyRowMapper.newInstance(HoaDon.class));
     }
+    
     public void luuHD(HoaDon hoaDon) {
         hoaDonRepository.save(hoaDon);
     }
-
+    public String MahoaDonMoi() {
+        List<HoaDon> list = hoaDonRepository.findAll();
+        StringBuilder s = new StringBuilder(list.get(list.size() - 1).getMaHD());
+        String temp = s.substring(2);
+        int result = Integer.parseInt(temp);
+        result++;
+        return Integer.toString(result);
+    }
 
 }

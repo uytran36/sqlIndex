@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 public class HoaDonController {
@@ -21,7 +22,11 @@ public class HoaDonController {
         // Lấy record DB hiện lên HTML
         return "DSHD"; // index là tên trang HTML
     }
-
+    @GetMapping(value = "/add")
+    public String maHoaDon(Model model) {
+        model.addAttribute("maHD", hoaDonService.MahoaDonMoi());
+        return "add";
+    }
     @PostMapping(value = "/add")
     public String addHoaDon(HoaDon hoaDon, KhachHang khachHang) {
         hoaDonService.luuHD(hoaDon);

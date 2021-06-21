@@ -4,11 +4,11 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <!------ Include the above in your HEAD tag ---------->
-  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -16,8 +16,9 @@
   <title>Hello, world!</title>
 </head>
 <body>
-<h1>Danh sach hoa don</h1>
-<form>
+<h1>Them hoa don</h1>
+<form method="post">
+  <h2>Thong tin khach hang</h2>
   <label>Họ</label>
   <input type="text" class="form-control" name="ho">
   <label>Tên</label>
@@ -37,13 +38,33 @@
   <label>Điện thoại</label>
   <input type="tel" class="form-control" name="dienThoai">
 
-  <div class="single" >
-    <input type="text" name="">
+  <h2>Thong tin hoa don</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Ma San Pham</th>
+        <th>So Luong</th>
+        <th>Gia Ban</th>
+        <th>Gia Giam</th>
+      </tr>
+    </thead>
+    <tbody id="ctHoaDon">
+
+    </tbody>
+  </table>
+  <div id="items">
+    <input type="text" name="ma-SP" id="maSP">
+    <input type="number" name="so-luong" id="soLuong">
+    <input type="number" name="gia-ban" id="giaBan">
+    <input type="number" name="gia-giam" id="giaGiam">
   </div>
+  <button type="button" onclick="addHoaDon()">Add</button>
+
 </form>
 
 <!-- Optional JavaScript; choose one of the two! -->
-<script type="text/javascript" th:src="@{/statics/js/additionalform.js}"></script>
+<script th:src="@{/js/add.js}"></script>
+
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 

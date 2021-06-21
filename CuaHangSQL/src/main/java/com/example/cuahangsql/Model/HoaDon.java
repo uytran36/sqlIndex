@@ -25,4 +25,5 @@ public class HoaDon {
     @Column(name = "TongTien")
     private int tongTien;
 
+
 }

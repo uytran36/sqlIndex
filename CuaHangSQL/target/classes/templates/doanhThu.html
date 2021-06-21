@@ -1,128 +1,96 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <link href="doanhThu.css" rel="stylesheet">
-  <title>Doanh Thu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link th:href="@{/css/doanhThu.css}" rel="stylesheet">
+    <title>Doanh Thu</title>
 </head>
 
 <body>
-  <!--Navbar-->
+<!--Navbar-->
 
-  <!--main-->
-  <main id="main">
+<!--main-->
+<main id="main">
     <h1 id="name">THỐNG KÊ DOANH THU</h1>
 
     <div id="btn">
-      <button type="button" class="btn btn-outline-secondary" id="btnprev">Thêm Hóa Đơn</button>
-      <button type="button" class="btn btn-outline-secondary"> Danh Sách Hóa Đơn </button>
+        <a  class="btn btn-outline-secondary" id="btnprev" href="/add">Thêm Hóa Đơn</a>
+        <a  class="btn btn-outline-secondary"> Danh Sách Hóa Đơn </a>
     </div>
 
     <div id="select">
-      <div id="month">
-        <label for="">Tháng: </label>
-        <select class="form-select" aria-label="Default select example">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="1">4</option>
-          <option value="2">5</option>
-          <option value="3">6</option>
-          <option value="1">7</option>
-          <option value="2">8</option>
-          <option value="3">9</option>
-          <option value="1">10</option>
-          <option value="2">11</option>
-          <option value="3">12</option>
-        </select>
-      </div>
+        <div id="wrap-month">
+            <span>Nhập tháng và năm (bắt đầu từ tháng 5 năm 2020 đến tháng 6 năm 2021)</span>
+            <br>
+            <label for="month">Tháng: </label>
+            <input type="text" class="form-control" id="month" placeholder="Nhập tháng">
+        </div>
+        <div id="wrap-year">
+            <label for="year" >Năm: </label>
+            <input type="text" class="form-control" id="year" placeholder="Nhập năm">
+        </div>
+        <div id="btnXem">
+            <button onclick="submitFunc()" class="btn btn-secondary"> Xem </button>
+        </div>
 
-      <div id="year">
-        <label for="">Năm: </label>
-        <select class="form-select" aria-label="Default select example" title="Năm">
-          <option value="1">2020</option>
-          <option value="2">2021</option>
-        </select>
-      </div>
-
-      <div id="btnXem">
-        <button type="button" class="btn btn-secondary"> Xem </button>
-      </div>
     </div>
 
     <div id="table">
-      <table class="table table-striped">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">STT</th>
-            <th scope="col">Tên Mặt Hàng</th>
-            <th scope="col">Số Lượng</th>
-            <th scope="col">Doanh Thu</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-
-          <tr>
-            <th scope="row">4</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-          <!--con nhieu tr o day-->
-          <tr class="table-danger" class="sum">
-            <th scope="row"></th>
-            <td>Tổng</td>
-            <td>1351</td>
-            <td>1351</td>
-          </tr>
-        </tbody>
-      </table>
-
+        <table class="table table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Tên Mặt Hàng</th>
+                <th scope="col">Số Lượng</th>
+                <th scope="col">Doanh Thu (nghìn Đồng)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="doanhThu,iterStat : ${temp}">
+                <td scope="row" th:text="${iterStat.count}"></td>
+                <td th:text="${doanhThu.tenSP}"></td>
+                <td th:text="${doanhThu.soLuong}"></td>
+                <td th:text="${doanhThu.tongTien}" > </td>
+            </tr>
+            <!--con nhieu tr o day-->
+            <tr class="table-danger" id="sum">
+                <th scope="row"></th>
+                <td>Tổng</td>
+                <td th:text="${tong.soLuong}"></td>
+                <td th:text="${tong.tongTien}"></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
-  </main>
+    <div id="pagination">
+        <div id="btn-prev">
+            <button onclick="prevFunc()" class="btn btn-secondary"> Trang trước </button>
+        </div>
+        <div id="btn-next">
+            <button onclick="nextFunc()" class="btn btn-secondary"> Trang kế </button>
+        </div>
+    </div>
+</main>
 
-  <!--footer-->
-  <footer id="footer">
+<!--footer-->
+<footer id="footer">
     <div>
-      <p>Copyright by </p>
+        <p>Copyright by </p>
     </div>
-  </footer>
+</footer>
 
-  <!-- JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-    crossorigin="anonymous"></script>
+<!-- JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+<script th:src="@{/js/doanhThu.js}"></script>
 </body>
 
 </html>
