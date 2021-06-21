@@ -15,17 +15,17 @@ public class HoaDonController {
     private HoaDonService hoaDonService;
     @Autowired
     private KhachHangService khachHangService;
-    @GetMapping(value = "/index")
+    @GetMapping(value = "/DSHD")
     public String homepage(Model model) {
-//        model.addAttribute("dsHD", hoaDonService.danhSachHoaDon());
+        model.addAttribute("dsHD", hoaDonService.danhSachHoaDon());
         // Lấy record DB hiện lên HTML
-        return "index"; // index là tên trang HTML
+        return "DSHD"; // index là tên trang HTML
     }
 
     @PostMapping(value = "/add")
     public String addHoaDon(HoaDon hoaDon, KhachHang khachHang) {
         hoaDonService.luuHD(hoaDon);
         khachHangService.luuKhachHang(khachHang);
-        return "index";
+        return "DSHD";
     }
 }

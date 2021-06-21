@@ -15,13 +15,13 @@ public class HoaDonService {
     @Autowired
     private HoaDonRepository hoaDonRepository;
 
-//    @Autowired
-//    private JdbcTemplate jdbcTemplate;
-//
-//    public List<HoaDon> danhSachHoaDon() {
-//        String listHd = "SELECT * FROM HoaDon";
-//        return jdbcTemplate.query(listHd, BeanPropertyRowMapper.newInstance(HoaDon.class));
-//    }
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    public List<HoaDon> danhSachHoaDon() {
+        String listHd = "SELECT * FROM HoaDon WHERE MaHD='HD00000001'";
+        return jdbcTemplate.query(listHd, BeanPropertyRowMapper.newInstance(HoaDon.class));
+    }
     public void luuHD(HoaDon hoaDon) {
         hoaDonRepository.save(hoaDon);
     }
