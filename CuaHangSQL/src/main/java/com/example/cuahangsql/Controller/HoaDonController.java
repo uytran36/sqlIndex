@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.io.IOException;
+
 @Controller
 public class HoaDonController {
     @Autowired
@@ -27,9 +29,8 @@ public class HoaDonController {
         return "add";
     }
     @PostMapping(value = "/add")
-    public String addHoaDon(HoaDon hoaDon, KhachHang khachHang) {
+    public String addHoaDon(HoaDon hoaDon)  {
         hoaDonService.luuHD(hoaDon);
-        khachHangService.luuKhachHang(khachHang);
         return "index";
     }
 }

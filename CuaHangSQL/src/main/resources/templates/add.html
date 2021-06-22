@@ -41,8 +41,10 @@
   <h2>Thông tin hóa đơn</h2>
   <table class="table">
     <h3>Chi tiết hóa đơn</h3>
-    <div>Mã hóa đơn:<span th:text="${maHD}" name="maHD"></span></div>
-    <div>Tổng tiền: </div>
+    <div>Mã hóa đơn:<input th:text="${maHD}" name="maHD" id="maHD" readonly></div>
+    <div>Tổng tiền: <input name="tongTien" id="tongTien" readonly></div>
+    <div>Ngày lập: <input type="date" name="ngayLap" id="ngayLap"></div>
+    <div>Mã KH: <input type="text" name="maKH" id="maKH"></div>
     <thead>
       <tr>
         <th>Ma San Pham</th>
@@ -62,7 +64,7 @@
     <input type="number" name="giaGiam" id="giaGiam">
   </div>
   <button type="button" onclick="addHoaDon()">Thêm chi tiết hóa đơn</button>
-  <button type="button" onclick="">Tổng kết</button>
+  <button type="button" onclick="submitCtHD()">Tổng kết</button>
   <button type="submit"></button>
 </form>
 
