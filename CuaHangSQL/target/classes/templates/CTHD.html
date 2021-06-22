@@ -27,8 +27,8 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="CTHD:${dsHDCT}">
-            <th>1</th>
+        <tr th:each="CTHD,iterStat : ${dsHDCT}">
+            <td th:text="${iterStat.count}"></td>
             <td th:text="${CTHD.maSP}"></td>
             <td th:text="${CTHD.soLuong}"></td>
             <td th:text="${CTHD.giaBan}"></td>

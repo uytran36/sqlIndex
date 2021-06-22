@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <!-- Required meta tags -->
@@ -54,7 +54,7 @@
             </thead>
             <tbody>
             <tr th:each="doanhThu,iterStat : ${temp}">
-                <td scope="row" th:text="${iterStat.count}"></td>
+                <td th:text="${iterStat.count}"></td>
                 <td th:text="${doanhThu.tenSP}"></td>
                 <td th:text="${doanhThu.soLuong}"></td>
                 <td th:text="${doanhThu.tongTien}" > </td>

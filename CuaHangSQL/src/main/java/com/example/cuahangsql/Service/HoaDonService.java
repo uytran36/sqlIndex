@@ -8,7 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.stereotype.Service;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.io.*;
 import org.jsoup.nodes.Document;
 import java.util.List;
@@ -23,12 +27,11 @@ public class HoaDonService {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
-
     public List<HoaDon> danhSachHoaDon() {
-        String listHd = "SELECT * FROM HoaDon WHERE MaHD='HD00000001'";
+
+        String listHd = "SELECT * FROM HoaDon";
         return jdbcTemplate.query(listHd, BeanPropertyRowMapper.newInstance(HoaDon.class));
-//        List<HoaDon> allHD =hoaDonRepository.findAll(firstPage).getContent();
-//        return allHD;
+
     }
     
     public void luuHD(HoaDon hoaDon){
