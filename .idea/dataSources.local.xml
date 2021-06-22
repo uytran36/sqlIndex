@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="IU-211.7442.40" />
+  <component name="dataSourceStorageLocal" created-in="IU-211.7442.40">
+    <data-source name="CuaHang@localhost" uuid="ef539bb7-e022-4220-af1c-c96c59542e32">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MSSQL" exact-version="0" />
+      <schema-mapping />
+    </data-source>
+  </component>
 </project>
