@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.io.IOException;
 
 @Controller
 public class HoaDonController {
@@ -49,9 +50,8 @@ public class HoaDonController {
 //        return "add";
 //    }
     @PostMapping(value = "/add")
-    public String addHoaDon(HoaDon hoaDon, KhachHang khachHang) {
+    public String addHoaDon(HoaDon hoaDon)  {
         hoaDonService.luuHD(hoaDon);
-        khachHangService.luuKhachHang(khachHang);
-        return "DSHD";
+        return "index";
     }
 }

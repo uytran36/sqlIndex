@@ -41,8 +41,10 @@
   <h2>Thông tin hóa đơn</h2>
   <table class="table">
     <h3>Chi tiết hóa đơn</h3>
-    <div>Mã hóa đơn:<span th:text="${maHD}" name="maHD"></span></div>
-    <div>Tổng tiền: </div>
+    <div>Mã hóa đơn:<span th:text="${maHD}" id="maHD"></span></div>
+    <div>Tổng tiền: <span id="tongTien"></span></div>
+    <div>Ngày lập: <input type="date" id="ngayLap"></div>
+    <div>Mã KH: <input type="text" id="maKH"></div>
     <thead>
       <tr>
         <th>Ma San Pham</th>

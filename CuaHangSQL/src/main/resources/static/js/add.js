@@ -20,16 +20,23 @@ function addHoaDon() {
 
         var td1 = document.createElement("td")
         td1.setAttribute("name", "maSP")
+        td1.id = 'maSP-' + count;
         td1.innerHTML = maSP
+
         var td2 = document.createElement("td")
         td2.setAttribute("name", "soLuong")
         td2.innerHTML = soLuong
+        td2.id = 'soLuong-' + count;
+
         var td3 = document.createElement("td")
         td3.setAttribute("name", "giaBan")
         td3.innerHTML = giaBan
+        td3.id = 'giaBan-' + count;
+
         var td4 = document.createElement("td")
         td4.setAttribute("name", "giaGiam")
         td4.innerHTML = giaGiam
+        td4.id = 'giaGiam-' + count;
 
         tr.appendChild(td1)
         tr.appendChild(td2)
@@ -44,5 +51,15 @@ function addHoaDon() {
         document.getElementById("giaGiam").value = ''
         count = count + 1
     }
+}
 
+function submitCtHD() {
+    let tong = 0;
+    for (let i = 1; i <= count; i++) {
+        var ban = document.getElementById("giaBan-" + i).value;
+        var giam = document.getElementById("giaGiam-" + i).value;
+        var soLuong = document.getElementById("soLuong-" + i).value;
+        tong += (ban - giam) * soLuong;
+    }
+    document.getElementById("tongTien").innerHTML = tong.toString();
 }

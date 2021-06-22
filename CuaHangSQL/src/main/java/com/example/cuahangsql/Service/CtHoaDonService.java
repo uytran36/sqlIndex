@@ -15,6 +15,10 @@ import java.util.List;
 @Service
 public class CtHoaDonService {
     @Autowired
+    private CtHoaDonRepository ctHoaDonRepository;
+
+    public void saveAllCtHD(List<CtHoaDon> ctHoaDonList) {
+        ctHoaDonRepository.saveAll(ctHoaDonList);
     private CtHoaDonRepository CtHoaDonRepository;
 
     @Autowired
