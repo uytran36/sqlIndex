@@ -4,16 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Data
+@Data // Getter Setter To-String
 @Table(name = "HoaDon")
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor // Tự động khởi tạo Constructor
+@AllArgsConstructor // Khởi tạo Atrribute
 public class HoaDon {
     @Id
     @Column(name = "MaHD")
@@ -24,5 +23,4 @@ public class HoaDon {
     private String ngayLap;
     @Column(name = "TongTien")
     private int tongTien;
-
 }

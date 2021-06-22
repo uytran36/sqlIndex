@@ -22,6 +22,7 @@ body {
     margin-left: 20px;
     margin-right: 1em;
 }
+
 .thead-dark{
     background-color: #21578a;
     color: white;
@@ -53,15 +54,6 @@ body {
 #btnprev{
     margin-right: 70em;
 }
-
-#btn-prev {
-    float: left;
-}
-
-#pagination {
-    text-align: right;
-}
-
 @media (max-width: 1500px) {
     #select{
         margin-bottom: 20px;
