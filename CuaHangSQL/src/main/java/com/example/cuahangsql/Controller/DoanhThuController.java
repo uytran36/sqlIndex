@@ -22,14 +22,17 @@ public class DoanhThuController {
     private DoanhThuService doanhThuService;
 
     @GetMapping(value = "/doanhthu/{month}/{year}/{page}")
-    public String doanhThu( @PathVariable("month") String month, @PathVariable("year") String year, @PathVariable("page") String page, Model model, Model model2) {
+    public String doanhThu( @PathVariable("month") String month, @PathVariable("year") String year, @PathVariable("page") String page, Model model) {
         int monthInt = Integer.parseInt(month);
         int yearInt = Integer.parseInt(year);
         List<String> listMaDoanhThu = doanhThuService.danhSachMaSP(monthInt, yearInt);
         List<DoanhThuModel> listDoanhThu = new ArrayList<>();
+//
+//        int start = (Integer.parseInt(page) - 1) * 15;
+//        int end = Integer.parseInt(page) * 15 - 1;
 
-        int start = (Integer.parseInt(page) - 1) * 15;
-        int end = Integer.parseInt(page) * 15 - 1;
+        int start = (Integer.parseInt(page) - 1) * 2;
+        int end = Integer.parseInt(page) * 2 - 1;
 
         for(int i = start; i < end; i++) {
             if(i == listMaDoanhThu.size() - 1) {
