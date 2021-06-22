@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="4f655c21-2edf-454f-917f-fcded2dcbd4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/be549944-c4a2-40b3-8c43-2443d35c9b11.xml" beforeDir="false" />
@@ -12,6 +13,42 @@
       <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/resources/templates/doanhThu.html" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/resources/templates/doanhThu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Controller/DoanhThuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Controller/DoanhThuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/templates/doanhThu.html" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/templates/doanhThu.html" afterDir="false" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="5c5e3e9d-01f7-4eb7-9723-92f58689dc52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/be549944-c4a2-40b3-8c43-2443d35c9b11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Repository/CtHoaDonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Repository/CtHoaDonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Repository/HoaDonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Repository/HoaDonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Service/HoaDonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Service/HoaDonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Controller/HoaDonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Controller/HoaDonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Repository/HoaDonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Repository/HoaDonRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Service/HoaDonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Service/HoaDonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/templates/CTHD.html" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/templates/CTHD.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/templates/index.html" beforeDir="false" />
+=======
+    <list default="true" id="4f655c21-2edf-454f-917f-fcded2dcbd4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_13_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/be549944-c4a2-40b3-8c43-2443d35c9b11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/CuaHangSQL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/CuaHangSQL.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Controller/CtHoaDonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Controller/CtHoaDonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Controller/HoaDonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Controller/HoaDonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Model/HoaDon.java" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Model/HoaDon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Service/CtHoaDonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Service/CtHoaDonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Service/HoaDonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Service/HoaDonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/resources/static/js/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/resources/static/js/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/resources/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/resources/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Controller/HoaDonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Controller/HoaDonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Model/HoaDon.class" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Model/HoaDon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Service/CtHoaDonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Service/CtHoaDonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Service/HoaDonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Service/HoaDonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/templates/add.html" afterDir="false" />
+>>>>>>> 2d6d55d6be8d61facdd970f1abb7684c7d8d8c48
+>>>>>>> 13d245eef19a1282986f387bf16879667e58b369
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +116,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4f655c21-2edf-454f-917f-fcded2dcbd4d" name="Default Changelist" comment="" />
+      <changelist id="5c5e3e9d-01f7-4eb7-9723-92f58689dc52" name="Default Changelist" comment="" />
       <created>1623861975815</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -95,9 +132,18 @@
       <workItem from="1624178365201" duration="287000" />
       <workItem from="1624178774186" duration="7541000" />
       <workItem from="1624196731100" duration="2092000" />
+<<<<<<< HEAD
       <workItem from="1624203889225" duration="417000" />
       <workItem from="1624362479106" duration="1166000" />
       <workItem from="1624365285379" duration="1884000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1624290686970" duration="50000" />
+=======
+      <workItem from="1624296836148" duration="1206000" />
+      <workItem from="1624342654477" duration="395000" />
+>>>>>>> 2d6d55d6be8d61facdd970f1abb7684c7d8d8c48
+>>>>>>> 13d245eef19a1282986f387bf16879667e58b369
     </task>
     <servers />
   </component>
