@@ -10,11 +10,14 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.stereotype.Service;
+<<<<<<< HEAD
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+=======
 import java.io.*;
 import org.jsoup.nodes.Document;
+>>>>>>> 2d6d55d6be8d61facdd970f1abb7684c7d8d8c48
 import java.util.List;
 import java.util.Optional;
 

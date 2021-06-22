@@ -13,9 +13,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
+=======
 import java.io.IOException;
+>>>>>>> 2d6d55d6be8d61facdd970f1abb7684c7d8d8c48
 
 @Controller
 public class HoaDonController {

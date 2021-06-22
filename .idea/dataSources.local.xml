@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="dataSourceStorageLocal" created-in="IU-211.7442.40">
     <data-source name="CuaHang@localhost" uuid="ef539bb7-e022-4220-af1c-c96c59542e32">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MSSQL" exact-version="0" />
+=======
+  <component name="dataSourceStorageLocal">
+    <data-source name="CUAHANG@localhost" uuid="dc210aca-bd5b-420e-bc61-35d03b76327f">
+      <database-info product="Microsoft SQL Server" version="15.00.2000" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 9.2 for SQL Server" driver-version="9.2.0.0" dbms="MSSQL" exact-version="15.0.2000" exact-driver-version="9.2">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sa</user-name>
+>>>>>>> 2d6d55d6be8d61facdd970f1abb7684c7d8d8c48
       <schema-mapping />
     </data-source>
   </component>
