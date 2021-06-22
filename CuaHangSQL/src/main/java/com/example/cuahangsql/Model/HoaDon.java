@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Data
+@Data // Getter Setter To-String
 @Table(name = "HoaDon")
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor // Tự động khởi tạo Constructor
+@AllArgsConstructor // Khởi tạo Atrribute
 public class HoaDon {
     @Id
     @Column(name = "MaHD")

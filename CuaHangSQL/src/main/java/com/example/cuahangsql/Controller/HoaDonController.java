@@ -18,10 +18,11 @@ public class HoaDonController {
     private HoaDonService hoaDonService;
     @Autowired
     private KhachHangService khachHangService;
-    @GetMapping(value = "/index")
+    @GetMapping(value = "/DSHD")
     public String homepage(Model model) {
-//        model.addAttribute("dsHD", hoaDonService.danhSachHoaDon());
-        return "index";
+        model.addAttribute("dsHD", hoaDonService.danhSachHoaDon());
+        // Lấy record DB hiện lên HTML
+        return "DSHD"; // index là tên trang HTML
     }
     @GetMapping(value = "/add")
     public String maHoaDon(Model model) {
