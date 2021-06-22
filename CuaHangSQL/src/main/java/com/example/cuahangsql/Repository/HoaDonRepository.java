@@ -9,6 +9,5 @@ import java.util.List;
 import java.util.Optional;
 
 public interface HoaDonRepository extends JpaRepository<HoaDon, String> {
-    @Override
-    Optional<HoaDon> findById(String s);
+    Optional<HoaDon> findHoaDonByMaHD(String maHD);
 }

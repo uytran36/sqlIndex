@@ -8,7 +8,5 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class SanPhamController {
-    @Autowired
-    private SanPhamService sanPhamService;
 
 }

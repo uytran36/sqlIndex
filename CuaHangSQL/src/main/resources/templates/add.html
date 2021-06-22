@@ -17,8 +17,12 @@
   <title>Hello, world!</title>
 </head>
 <body>
-<h1 style="text-align: center; margin: auto">Thêm hóa hơn</h1>
+<h1 style="text-align: center; margin: auto; margin-top: 30px">Thêm hóa đơn</h1>
 
+<div id="btn">
+  <a  class="btn btn-outline-secondary btn-nav" id="btnprev" href="/doanhthu/5/2020/1">Doanh thu</a>
+  <a  class="btn btn-outline-secondary btn-nav" href="/DSHD/1"> Danh Sách Hóa Đơn </a>
+</div>
 <form method="post" th:action="@{/add}">
   <fieldset class="form">
     <legend>Thông tin hóa đơn</legend>
@@ -41,7 +45,8 @@
       </div>
     </div>
   </fieldset>
-  <button type="submit" class="btn btn-primary btn-add">Thêm hóa đơn</button>
+  <button type="submit" class="btn btn-primary btn-add" onclick="addHoaDon()">Thêm hóa đơn</button>
+  <div class="alert alert-info text-center" style="color: red" th:if="${message}" th:text="${message}"></div>
 </form>
 
 <!-- Optional JavaScript; choose one of the two! -->

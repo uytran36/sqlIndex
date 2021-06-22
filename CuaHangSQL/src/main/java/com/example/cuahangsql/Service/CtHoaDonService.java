@@ -1,21 +1,11 @@
 package com.example.cuahangsql.Service;
-
-import com.example.cuahangsql.Controller.CtHoaDonController;
 import com.example.cuahangsql.Model.CtHoaDon;
 import com.example.cuahangsql.Model.HoaDon;
 import com.example.cuahangsql.Repository.CtHoaDonRepository;
-import com.example.cuahangsql.Repository.HoaDonRepository;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

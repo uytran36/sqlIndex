@@ -13,4 +13,10 @@ public class KhachHangService {
     public void luuKhachHang(KhachHang khachHang) {
         khachHangRepository.save(khachHang);
     }
+    public boolean checkMaKH(String maKH) {
+        if (khachHangRepository.findKhachHangByMaKH(maKH).isPresent()) {
+            return true;
+        }
+        return false;
+    }
 }

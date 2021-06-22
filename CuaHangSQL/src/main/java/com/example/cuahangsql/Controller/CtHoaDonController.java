@@ -19,7 +19,8 @@ public class CtHoaDonController {
     private CtHoaDonService ctHoaDonService;
     @Autowired
     private SanPhamService sanPhamService;
-
+    @Autowired
+    private HoaDonService hoaDonService;
     @Autowired
     private KhachHangService khachHangService;
     @RequestMapping(value = "/CTHD/{maHD}", method = RequestMethod.GET)
@@ -43,8 +44,21 @@ public class CtHoaDonController {
 
     @PostMapping(value = "/addcthd")
     public String addcthd(CtHoaDon ctHoaDon, RedirectAttributes ra) {
-        if (!sanPhamService.checkSP(ctHoaDon.getMaSP()))
-            return "addct";
+        if (!sanPhamService.checkSP(ctHoaDon.getMaSP())) {
+            ra.addFlashAttribute("message", "Không tồn tại mã sản phẩm");
+            return "redirect:/addcthd";
+        }
+        else if (ctHoaDon.getSoLuong() <= 0) {
+            ra.addFlashAttribute("message", "Số lượng không hợp lệ");
+            return "redirect:/addcthd";
+        }
+        else if (ctHoaDon.getGiaBan() <= 0 || ctHoaDon.getGiaGiam() < 0) {
+            ra.addFlashAttribute("message", "Giá tiền không hợp lệ");
+            return "redirect:/addcthd";
+        }
+        else if (ctHoaDon.getThanhTien() < 0) {
+            ra.addFlashAttribute("message", "Thành tiền không hợp lệ");
+        }
         ra.addFlashAttribute("message", "Thêm chi tiết thành công");
         ctHoaDonService.saveCtHD(ctHoaDon);
         return "redirect:/addcthd";
