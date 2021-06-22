@@ -6,12 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.List;
 import java.util.Optional;
 
-import static com.example.cuahangsql.Repository.HoaDonRepository.firstPage;
 
 @Service
 public class HoaDonService {
@@ -20,12 +22,11 @@ public class HoaDonService {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
-
     public List<HoaDon> danhSachHoaDon() {
-//        String listHd = "SELECT * FROM HoaDon WHERE MaHD='HD00000001'";
-//        return jdbcTemplate.query(listHd, BeanPropertyRowMapper.newInstance(HoaDon.class));
-        List<HoaDon> allHD =hoaDonRepository.findAll(firstPage).getContent();
-        return allHD;
+
+        String listHd = "SELECT * FROM HoaDon";
+        return jdbcTemplate.query(listHd, BeanPropertyRowMapper.newInstance(HoaDon.class));
+
     }
     
     public void luuHD(HoaDon hoaDon) {
