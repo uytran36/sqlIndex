@@ -14,7 +14,7 @@ import org.jsoup.nodes.Document;
 import java.util.List;
 import java.util.Optional;
 
-import static com.example.cuahangsql.Repository.HoaDonRepository.firstPage;
+//import static com.example.cuahangsql.Repository.HoaDonRepository.firstPage;
 
 @Service
 public class HoaDonService {
@@ -25,22 +25,27 @@ public class HoaDonService {
     private JdbcTemplate jdbcTemplate;
 
     public List<HoaDon> danhSachHoaDon() {
-//        String listHd = "SELECT * FROM HoaDon WHERE MaHD='HD00000001'";
-//        return jdbcTemplate.query(listHd, BeanPropertyRowMapper.newInstance(HoaDon.class));
-        List<HoaDon> allHD =hoaDonRepository.findAll(firstPage).getContent();
-        return allHD;
+        String listHd = "SELECT * FROM HoaDon WHERE MaHD='HD00000001'";
+        return jdbcTemplate.query(listHd, BeanPropertyRowMapper.newInstance(HoaDon.class));
+//        List<HoaDon> allHD =hoaDonRepository.findAll(firstPage).getContent();
+//        return allHD;
     }
     
     public void luuHD(HoaDon hoaDon){
         hoaDonRepository.save(hoaDon);
     }
     public String MahoaDonMoi() {
-        List<HoaDon> list = hoaDonRepository.findAll();
-        StringBuilder s = new StringBuilder(list.get(list.size() - 1).getMaHD());
-        String temp = s.substring(2);
-        int result = Integer.parseInt(temp);
+        String query = "SELECT TOP 1 MaHD FROM HoaDon ORDER BY MaHD DESC";
+        List<HoaDon> list = jdbcTemplate.query(query, BeanPropertyRowMapper.newInstance(HoaDon.class));
+        StringBuilder temp = new StringBuilder(list.get(0).getMaHD());
+        String s = temp.substring(2);
+        int result = Integer.parseInt(s);
         result++;
-        return Integer.toString(result);
+        String id = "HD";
+        while ((id + result).length() < 10) {
+            id += "0";
+        }
+        return (id + result);
     }
 
     private HoaDon layHoaDon() throws IOException {

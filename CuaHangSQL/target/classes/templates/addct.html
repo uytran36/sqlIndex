@@ -8,7 +8,6 @@
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <link th:href="@{/css/add.css}" rel="stylesheet">
   <!------ Include the above in your HEAD tag ---------->
 
   <!-- Bootstrap CSS -->
@@ -17,35 +16,21 @@
   <title>Hello, world!</title>
 </head>
 <body>
-<h1 style="text-align: center; margin: auto">Thêm hóa hơn</h1>
-
-<form method="post" th:action="@{/add}">
-  <fieldset class="form">
-    <legend>Thông tin hóa đơn</legend>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label label" for="maHD">Mã hóa đơn:</label>
-      <div class="col-sm-10">
-        <input th:value="${maHD}" name="maHD" id="maHD" class="form-control input-add" readonly>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label label" for="ngayLap">Ngày lập:</label>
-      <div class="col-sm-10">
-        <input type="date" name="ngayLap" id="ngayLap" class="form-control input-add">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label label" for="maKH">Mã KH:</label>
-      <div class="col-sm-10">
-        <input type="text" name="maKH" id="maKH" class="form-control input-add">
-      </div>
-    </div>
-  </fieldset>
-  <button type="submit" class="btn btn-primary btn-add">Thêm hóa đơn</button>
+<h1>Them hoa don</h1>
+<form method="post" th:action="@{/addcthd}" oninput="tongTien.value=(parseInt(giaBan.value) - parseInt(giaGiam.value)) * parseInt(soLuong.value)">
+  <h2>Thông tin hóa đơn</h2>
+  <label>Mã hóa đơn:<input th:value="${maHD}" name="maHD" id="maHD" readonly></label>
+  <label>Mã sản phẩm: <input name="maSP" id="maSP"></label>
+  <label>Số lượng: <input type="number" name="soLuong" id="soLuong" value="1"></label>
+  <label>Giá bán: <input type="number" name="giaBan" id="giaBan" value="0"></label>
+  <label>Giá giảm: <input type="number" name="giaGiam" id="giaGiam" value="0"></label>
+  <label>Thành tiền: <output name="tongTien" for="giaBan giaGiam"></output></label>
+  <button type="submit">Thêm chi tiết hóa đơn</button>
+  <div class="alert alert-info text-center" th:if="${message}" th:text="${message}"></div>
 </form>
 
 <!-- Optional JavaScript; choose one of the two! -->
-
+<script th:src="@{/js/add.js}"></script>
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

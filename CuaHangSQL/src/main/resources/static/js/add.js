@@ -1,4 +1,4 @@
-let count = 1;
+var count = 0;
 
 function addHoaDon() {
     if (document.getElementById("maSP").value === ''
@@ -7,10 +7,12 @@ function addHoaDon() {
         || document.getElementById("giaGiam").value === '') {
         alert("Xin hay nhap day du thong tin")
     }
-    else if (document.getElementById("giaBan").value < document.getElementById("giaGiam").value) {
+    else if (parseInt(document.getElementById("giaBan").value)
+        < parseInt(document.getElementById("giaGiam").value)) {
         alert("Gia ban phai cao hon gia giam")
     }
     else {
+        count++
         var maSP = document.getElementById("maSP").value
         var soLuong = document.getElementById("soLuong").value
         var giaBan = document.getElementById("giaBan").value
@@ -49,17 +51,35 @@ function addHoaDon() {
         document.getElementById("soLuong").value = ''
         document.getElementById("giaBan").value = ''
         document.getElementById("giaGiam").value = ''
-        count = count + 1
     }
 }
 
+
+
 function submitCtHD() {
-    let tong = 0;
-    for (let i = 1; i <= count; i++) {
-        var ban = document.getElementById("giaBan-" + i).value;
-        var giam = document.getElementById("giaGiam-" + i).value;
-        var soLuong = document.getElementById("soLuong-" + i).value;
+    var tong = 0;
+    var check = 0;
+    while (count > 0) {
+        var ban = parseInt(document.getElementById("giaBan-" + count).innerText);
+        var giam = parseInt(document.getElementById("giaGiam-" + count).innerText);
+        var soLuong = parseInt(document.getElementById("soLuong-" + count).innerText);
         tong += (ban - giam) * soLuong;
+        count--
+        check++
     }
-    document.getElementById("tongTien").innerHTML = tong.toString();
+
+
+    count = check;
+    console.log(tong);
+    var tongTien = document.getElementById("tongTien");
+    tongTien.value = tong;
+}
+
+function getCTHDValues(){
+    var maSP = document.getElementById("maSP-1").value;
+    var soLuong = document.getElementById("soLuong-1").value;
+    var giaBan = document.getElementById("giaBan-1").value;
+    var giaGiam = document.getElementById("giaGiam-1").value;
+    var result = maSP + "/" + soLuong + "/" + giaBan + "/" + giaGiam;
+    return result;
 }
