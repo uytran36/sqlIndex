@@ -64,6 +64,8 @@ public class CtHoaDonController {
         ctHoaDon.setThanhTien(ctHoaDon.getSoLuong() * (ctHoaDon.getGiaBan() - ctHoaDon.getGiaGiam()));
         ra.addFlashAttribute("message", "Thêm chi tiết thành công");
         ctHoaDonService.saveCtHD(ctHoaDon);
+
+
         String updateQuery = "UPDATE HoaDon SET TongTien = 0 WHERE MaHD = '" + ctHoaDon.getMaHD() + "'";
         jdbcTemplate.execute(updateQuery);
         return "redirect:/addcthd";
