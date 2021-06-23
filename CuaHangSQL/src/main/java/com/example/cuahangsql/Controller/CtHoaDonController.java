@@ -58,9 +58,10 @@ public class CtHoaDonController {
             ra.addFlashAttribute("message", "Giá tiền không hợp lệ");
             return "redirect:/addcthd";
         }
-        else if (ctHoaDon.getThanhTien() < 0) {
+        else if (ctHoaDon.getSoLuong() * (ctHoaDon.getGiaBan() - ctHoaDon.getGiaGiam()) <= 0) {
             ra.addFlashAttribute("message", "Thành tiền không hợp lệ");
         }
+        ctHoaDon.setThanhTien(ctHoaDon.getSoLuong() * (ctHoaDon.getGiaBan() - ctHoaDon.getGiaGiam()));
         ra.addFlashAttribute("message", "Thêm chi tiết thành công");
         ctHoaDonService.saveCtHD(ctHoaDon);
         String updateQuery = "UPDATE HoaDon SET TongTien = 0 WHERE MaHD = '" + ctHoaDon.getMaHD() + "'";
