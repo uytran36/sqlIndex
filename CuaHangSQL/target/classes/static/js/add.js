@@ -1,14 +1,6 @@
-let count = 1;
-
 function addHoaDon() {
-    if (document.getElementById("maSP").value === ''
-        || document.getElementById("soLuong").value === ''
-        || document.getElementById("giaBan").value === ''
-        || document.getElementById("giaGiam").value === '') {
-        alert("Xin hay nhap day du thong tin")
-    }
-    else if (document.getElementById("giaBan").value < document.getElementById("giaGiam").value) {
-        alert("Gia ban phai cao hon gia giam")
+    if (document.getElementById("ngayLap") == null || document.getElementById("maKH")) {
+        alert("Vui lòng nhập đủ thông tin")
     }
     else {
         var maSP = document.getElementById("maSP").value
