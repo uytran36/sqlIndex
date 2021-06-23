@@ -22,7 +22,7 @@ public class KhachHangService {
     }
     public boolean checkMaKH(String maKH) {
         String check = "SELECT MaKH FROM KHACHHANG";
-        List<String> list = jdbcTemplate.query(check, BeanPropertyRowMapper.newInstance(String.class));
+        List<String> list = jdbcTemplate.queryForList(check, String.class);;
         for (String s : list) {
             if (s.equals(maKH)) {
                 return true;

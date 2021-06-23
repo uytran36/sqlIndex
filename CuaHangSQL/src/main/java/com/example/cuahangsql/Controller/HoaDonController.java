@@ -3,6 +3,8 @@ import com.example.cuahangsql.Model.HoaDon;
 import com.example.cuahangsql.Service.HoaDonService;
 import com.example.cuahangsql.Service.KhachHangService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +22,8 @@ public class HoaDonController {
     private HoaDonService hoaDonService;
     @Autowired
     private KhachHangService khachHangService;
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
     @GetMapping(value = "/DSHD/{page}")
     public String listHD(Model model, @PathVariable("page") String page) {
         List<String> listMaHD = hoaDonService.danhSachMaHoaDon();

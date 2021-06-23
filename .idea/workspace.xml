@@ -5,23 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f655c21-2edf-454f-917f-fcded2dcbd4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_02.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_ST4_4_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_0_0_Alpha72.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_12_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_12_32.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_ST4_4_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_ST4_4_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_0_0_Alpha7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_0_0_Alpha7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Controller/CtHoaDonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Controller/CtHoaDonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Service/KhachHangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Service/KhachHangService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_12_32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Controller/HoaDonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/java/com/example/cuahangsql/Controller/HoaDonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Controller/CtHoaDonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/com/example/cuahangsql/Controller/CtHoaDonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CuaHangSQL/target/classes/templates/addct.html" beforeDir="false" afterPath="$PROJECT_DIR$/CuaHangSQL/target/classes/templates/addct.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +106,8 @@
       <workItem from="1624375386698" duration="7629000" />
       <workItem from="1624389804114" duration="1974000" />
       <workItem from="1624436146381" duration="687000" />
+      <workItem from="1624437548570" duration="656000" />
+      <workItem from="1624438244199" duration="387000" />
     </task>
     <servers />
   </component>
