@@ -19,6 +19,7 @@ public class CtHoaDonService {
 
     public void saveAllCtHD(List<CtHoaDon> ctHoaDonList) {
         ctHoaDonRepository.saveAll(ctHoaDonList);
+    }
     private CtHoaDonRepository CtHoaDonRepository;
 
     @Autowired

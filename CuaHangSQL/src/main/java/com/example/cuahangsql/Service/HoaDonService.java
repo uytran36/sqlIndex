@@ -10,14 +10,11 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.stereotype.Service;
-<<<<<<< HEAD
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-=======
 import java.io.*;
 import org.jsoup.nodes.Document;
->>>>>>> 2d6d55d6be8d61facdd970f1abb7684c7d8d8c48
 import java.util.List;
 import java.util.Optional;
 
@@ -29,11 +26,15 @@ public class HoaDonService {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    public List<HoaDon> danhSachHoaDon() {
+    public List<String> danhSachMaHoaDon() {
+        String listHd = "SELECT MaHD FROM HoaDon";
+        //return jdbcTemplate.query(listHd, BeanPropertyRowMapper.newInstance(HoaDon.class));
+        return jdbcTemplate.queryForList(listHd, String.class);
+    }
 
-        String listHd = "SELECT * FROM HoaDon";
+    public List<HoaDon> danhSachHoaDon(String maHD) {
+        String listHd = "SELECT * FROM HoaDon WHERE MaHD = '" + maHD + "'";
         return jdbcTemplate.query(listHd, BeanPropertyRowMapper.newInstance(HoaDon.class));
-
     }
     
     public void luuHD(HoaDon hoaDon){

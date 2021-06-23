@@ -51,8 +51,8 @@ body {
     margin-bottom: 20px;
 }
 
-#btnprev{
-    margin-right: 70em;
+#pagination {
+    float: left;
 }
 @media (max-width: 1500px) {
     #select{

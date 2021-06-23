@@ -12,13 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
-=======
+
 import java.io.IOException;
->>>>>>> 2d6d55d6be8d61facdd970f1abb7684c7d8d8c48
+
 
 @Controller
 public class HoaDonController {
@@ -28,18 +26,18 @@ public class HoaDonController {
     private KhachHangService khachHangService;
     @GetMapping(value = "/DSHD/{page}")
     public String listHD(Model model, @PathVariable("page") String page) {
-        List<HoaDon> listAllHD = hoaDonService.danhSachHoaDon();
+        List<String> listMaHD = hoaDonService.danhSachMaHoaDon();
         List<HoaDon> listHD = new ArrayList<>();
 
         int start = (Integer.parseInt(page) - 1) * 15;
-        int end = Integer.parseInt(page) * 15 - 1;
+        int end = Integer.parseInt(page) * 15;
 
         for(int i = start; i < end; i++) {
-            HoaDon HoaDon = new HoaDon();
-            HoaDon = listAllHD.get(i);
-            listHD.add(HoaDon);
+            List<HoaDon> hoaDon = new ArrayList<>();
+            hoaDon = hoaDonService.danhSachHoaDon(listMaHD.get(i));
+            listHD.add(hoaDon.get(0));
 
-            if(i == listAllHD.size() - 1) {
+            if(i == listMaHD.size() - 1) {
                 break;
             }
         }
