@@ -52,7 +52,9 @@ body {
 }
 
 #pagination {
-    float: left;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 @media (max-width: 1500px) {
     #select{

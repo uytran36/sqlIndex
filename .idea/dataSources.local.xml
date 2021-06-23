@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-211.7442.40">
-    <data-source name="CuaHang@localhost" uuid="ef539bb7-e022-4220-af1c-c96c59542e32">
+    <data-source name="CUAHANG@localhost" uuid="19164de4-7e15-492e-b8e1-c890e6fe4d36">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MSSQL" exact-version="0" />
-      <secret-storage>forget</secret-storage>
       <schema-mapping />
     </data-source>
   </component>
