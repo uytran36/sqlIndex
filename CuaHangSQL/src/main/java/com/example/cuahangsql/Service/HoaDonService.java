@@ -21,11 +21,15 @@ public class HoaDonService {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    public List<HoaDon> danhSachHoaDon() {
+    public List<String> danhSachMaHoaDon() {
+        String listHd = "SELECT MaHD FROM HoaDon";
+        //return jdbcTemplate.query(listHd, BeanPropertyRowMapper.newInstance(HoaDon.class));
+        return jdbcTemplate.queryForList(listHd, String.class);
+    }
 
-        String listHd = "SELECT * FROM HoaDon";
+    public List<HoaDon> danhSachHoaDon(String maHD) {
+        String listHd = "SELECT * FROM HoaDon WHERE MaHD = '" + maHD + "'";
         return jdbcTemplate.query(listHd, BeanPropertyRowMapper.newInstance(HoaDon.class));
-
     }
     
     public void luuHD(HoaDon hoaDon){

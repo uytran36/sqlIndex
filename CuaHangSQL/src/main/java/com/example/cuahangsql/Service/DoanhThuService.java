@@ -54,12 +54,20 @@ public class DoanhThuService {
     }
 
     public Tong tongDoanhThu(int thang, int nam) {
+//        String query = "select SUM(CAST(CT_HoaDon.SoLuong AS BIGINT)) AS SoLuong, SUM(CAST(HoaDon.TongTien AS BIGINT)) AS TongTien \n" +
+//                "from HoaDon, CT_HoaDon, SanPham \n" +
+//                "where MONTH(NgayLap) = " + thang + " \n" +
+//                "and YEAR(NgayLap) = " + nam + " \n" +
+//                "and HoaDon.MaHD = CT_HoaDon.MaHD \n" +
+//                "and CT_HoaDon.MaSP = SanPham.MaSP \n";
         String query = "select SUM(CAST(CT_HoaDon.SoLuong AS BIGINT)) AS SoLuong, SUM(CAST(HoaDon.TongTien AS BIGINT)) AS TongTien \n" +
-                "from HoaDon, CT_HoaDon, SanPham \n" +
-                "where MONTH(NgayLap) = " + thang + " \n" +
-                "and YEAR(NgayLap) = " + nam + " \n" +
-                "and HoaDon.MaHD = CT_HoaDon.MaHD \n" +
-                "and CT_HoaDon.MaSP = SanPham.MaSP \n";
+                "from HoaDon \n" +
+                "inner join CT_HoaDon \n" +
+                "on HoaDon.MaHD = CT_HoaDon.MaHD \n" +
+                "and MONTH(NgayLap) = "+ thang +" \n" +
+                "and YEAR(NgayLap) = "+ nam +" \n" +
+                "inner join SanPham \n" +
+                "on CT_HoaDon.MaSP = SanPham.MaSP";
         return jdbcTemplate.queryForObject(query, (rs, rowNum) -> new Tong(rs.getLong("SoLuong"), rs.getLong("TongTien")));
     }
 

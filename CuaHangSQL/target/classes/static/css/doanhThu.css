@@ -51,8 +51,10 @@ body {
     margin-bottom: 20px;
 }
 
-#btnprev{
-    margin-right: 70em;
+#pagination {
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 @media (max-width: 1500px) {
     #select{

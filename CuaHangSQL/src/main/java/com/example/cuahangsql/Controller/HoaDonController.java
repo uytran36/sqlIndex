@@ -22,18 +22,18 @@ public class HoaDonController {
     private KhachHangService khachHangService;
     @GetMapping(value = "/DSHD/{page}")
     public String listHD(Model model, @PathVariable("page") String page) {
-        List<HoaDon> listAllHD = hoaDonService.danhSachHoaDon();
+        List<String> listMaHD = hoaDonService.danhSachMaHoaDon();
         List<HoaDon> listHD = new ArrayList<>();
 
         int start = (Integer.parseInt(page) - 1) * 15;
-        int end = Integer.parseInt(page) * 15 - 1;
+        int end = Integer.parseInt(page) * 15;
 
         for(int i = start; i < end; i++) {
-            HoaDon HoaDon = new HoaDon();
-            HoaDon = listAllHD.get(i);
-            listHD.add(HoaDon);
+            List<HoaDon> hoaDon = new ArrayList<>();
+            hoaDon = hoaDonService.danhSachHoaDon(listMaHD.get(i));
+            listHD.add(hoaDon.get(0));
 
-            if(i == listAllHD.size() - 1) {
+            if(i == listMaHD.size() - 1) {
                 break;
             }
         }
